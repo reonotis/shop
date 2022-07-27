@@ -1,0 +1,144 @@
+
+/* 詳細画面タブ */
+.customer-show-tab{
+  width: 7rem;
+  height: 2.5rem;
+  margin-left: 0.125rem;
+  color: var(--blue-400);
+  background-color: #fff;
+  cursor: pointer;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-top-width: 2px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-color: var(--blue-400);
+  transition-duration: 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.customer-show-tab:hover{
+  background-color: var(--blue-200);
+}
+.customer-show-tab.active{
+  background-color: var(--blue-400);
+  color: white;
+}
+.customer-show-tab-logo{
+  height: 20px;
+  width: 30px;
+  fill: var(--blue-400);
+  margin-right: 0.25rem;
+}
+.customer-show-tab.active > .customer-show-tab-logo{
+  fill: white;
+}
+@media screen and (max-width:480px){
+  .customer-show-tab{
+    width: 3.5em;
+  }
+  .customer-show-tab.active{
+    width: 7em;
+  }
+  .customer-show-tab-text{
+    display: none;
+  }
+  .customer-show-tab.active > .customer-show-tab-text{
+    display: block;
+  }
+}
+
+/* 詳細画面 詳細項目 */
+.customer-show-detail{
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto; /*縦方向はスクロール可*/
+  overflow-x: hidden; /*横方向はスクロール不可*/
+  padding: 1rem;
+  border-color: var(--blue-400);
+  border-width: 2px;
+  border-radius: 0.25rem;
+}
+
+/* 詳細画面 */
+/* ログ一覧 */
+.customer-show-detail-logs{
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.customer-show-detail-logs>.log-num-line-area{
+  position: absolute;
+  margin-left: 0.5rem;
+  width: 2rem;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customer-show-detail-logs>.log-num-line-area>.log-num-line{
+  height: 100%;
+  width: 0.25rem;
+  background-color: var(--gray-200);
+  pointer-events: none;
+}
+.customer-show-detail-log-anchor{
+  position: relative;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  transition: var(--transition-hover);
+}
+.customer-show-detail-log-num{
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0px;
+  color: #ffffff;
+  border-radius: 50%;
+  border: solid 1px var(--indigo-500);
+  background-color: var(--indigo-500);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  z-index: 10;
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-hover);
+}
+.customer-show-detail-log-anchor:hover{
+  color: var(--blue-700);
+  background: #60A5FA80;
+}
+.customer-show-detail-log-anchor:hover .customer-show-detail-log-num{
+  margin-top: 1rem;
+}
+
+/* 詳細画面 */
+/* ライセンス */
+.customer-show-detail-licenses{
+  width: 50%;
+  margin-bottom: 1rem;
+}
+.customer-show-detail-license{
+  height: 100%;
+  padding: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--blue-100);
+}
+
+
+
+

@@ -1,0 +1,41 @@
+:root{
+  --shop_create_title_width: 140px;
+}
+
+
+.adminShopListTable{
+  width: 100%;
+  margin: 0 auto;
+}
+.adminShopListTable th{
+  background: var(--teal-700);
+  color: white;
+  padding: 1rem;
+}
+.adminShopListTable td{
+  padding: 0.25rem;
+}
+.adminShopListTable tr:nth-child(even){
+  background-color: white;
+}
+
+.adminShopListTable th{
+  border-right: solid 1px white;
+  border-left: solid 1px var(--teal-700);
+}
+.adminShopListTable th:last-child{
+  border-right: none;
+  border-right: solid 1px var(--teal-700);
+}
+
+
+.adminShopListTable td{
+  border-left: solid 1px var(--teal-700);
+}
+.adminShopListTable td:last-child{
+  border-right: solid 1px var(--teal-700);
+}
+
+.adminShopListTable tr td{
+  border-bottom: solid 1px var(--teal-700);
+}

@@ -1,0 +1,32 @@
+:root{
+}
+
+.selectShopDisplayArea{
+  height: 2.5rem;
+  padding: 0 5rem;
+  border-bottom: solid 1px #ccc ;
+  display: flex;
+  align-items: center;
+}
+
+.deselect{
+  margin: 0 0 0 auto;
+}
+.selectShopContents{
+  padding: 0rem ;
+  margin: 0rem 2rem 1rem;
+}
+.selectShopName{
+  background: #bbb;
+}
+.selectShopImg{
+  width: 250px;
+  height: 200px;
+  background: #ddd;
+}
+
+
+
+
+
+

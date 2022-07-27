@@ -1,0 +1,277 @@
+:root{
+  --calendar-one-day-width: 140px;
+
+}
+
+/* ログ管理画面 */
+.log-management-contents{
+  height: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: var(--gray-200);
+  transition: var(--transition-hover);
+}
+.log-management-contents:hover{
+  background: var(--blue-200);
+}
+
+
+.log-row{
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 60px);
+  margin: 0 0 15px 60px;
+  padding: 18px 25px 18px 85px;
+  background: #fff;
+  border: solid 2px var(--blue-700);
+  display: flex;
+  align-items: center;
+}
+
+.log-row>label{
+  position: absolute;
+  left: -70px;
+  width: 140px;
+  font-weight: 400;
+  word-wrap: break-word;
+  height: 40px;
+  font-size: 1em;
+  line-height: 160%;
+  letter-spacing: 1px;
+  background:  var(--blue-700);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.log-content{
+  width: 100%;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  transition: var(--transition-hover);
+}
+
+
+
+
+.scrollSlideLeftTrigger,
+.scrollSlideRightTrigger{
+  opacity: 0;
+}
+
+.scrollSlideLeft{
+  animation-name:SlideLeftAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+@keyframes SlideLeftAnime{
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scrollSlideRight{
+  animation-name:SlideRightAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes SlideRightAnime{
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.input-radios{
+  background: #eee;
+  border-radius: 1rem;
+  padding: 0.25rem;
+  width: fit-content;
+  margin: -5px;
+}
+input + label {
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+input:checked + label {
+  background: var(--blue-600);
+  border-radius: 1rem;
+  color: #fff;
+}
+input:checked + label>.input-radio>.icon>svg{
+  fill:#fff;
+}
+.input-radio{
+  width: 89px;
+  border-radius: 1rem;
+  padding: 0.25rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.icon.walk-icon{
+  height: 30px;
+  margin: 0 auto;
+  width: 30px;
+}
+
+
+
+
+/* admin/log/list */
+
+.log-section{
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  border: solid 1px #333;
+  border-radius: 2rem;
+}
+
+.log-contents{
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  padding: 18px 20px 18px 100px;
+  transition: var(--transition-hover);
+}
+.log-number-line{
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--blue-200);
+}
+.log-number{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background: var(--blue-600);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-hover);
+}
+.log-number::after{
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 50px;
+  width: 300px;
+  height: 2px;
+  background: linear-gradient(to right, var(--blue-600), var(--blue-50));
+}
+
+
+
+.log-date{
+  height: 27px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.log-time{
+  position: relative;
+  padding: 15px 0 0 20px;
+}
+.entry_time,
+.exit_time,
+.swim_time {
+  position: relative;
+  width: 60px;
+  text-align: center;
+  padding: 0;
+  font-size: 1.1rem;
+}
+.swim_time {
+  margin-left: 20px;
+}
+.entry_time::before,
+.exit_time::before,
+.swim_time::before {
+  position: absolute;
+  top: -13px;
+  left: -5px;
+  font-size: 0.9rem;
+  color: var(--blue-700);
+  transform: rotate(-10deg);
+}
+
+.entry_time::before{
+  content: "entry";
+}
+.exit_time::before{
+  content: "exit";
+}
+.swim_time::before{
+  content: "swim";
+}
+
+.svg-contents-parent{
+  position: relative;
+  padding: 15px 0 0 20px;
+
+}
+.svg-contents{
+  position: relative;
+  margin: 0 10px 0 0 ;
+  padding: 8px 0 0;
+  display: flex;
+  text-align: center;
+  flex-flow: column;
+}
+.svg-contents::before {
+  position: absolute;
+  top: -13px;
+  left: -5px;
+  font-size: 0.9rem;
+  color: var(--blue-700);
+  transform: rotate(-10deg);
+}
+.svg-contents::before{
+  content: attr(content-wrapper);
+}
+
+
+.log-contents:hover{
+  background: var(--blue-100);
+}
+.log-contents:hover .log-number {
+  background: var(--blue-400);
+  margin-left: 10px;
+}
+.log-contents:hover .log-number::after {
+  width: 40px;
+  background: var(--blue-400);
+}
+.log-contents:hover .log-content{
+  border: solid 2px var(--blue-400);
+}
+
+

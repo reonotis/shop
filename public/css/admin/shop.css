@@ -1,0 +1,143 @@
+:root{
+  --shop_create_title_width: 140px;
+  --shopDetailContainerTitleWidth: 140px;
+}
+
+
+.adminShopListTable{
+  width: 100%;
+  margin: 0 auto;
+}
+.adminShopListTable th{
+  background: var(--teal-700);
+  color: white;
+  padding: 1rem;
+}
+.adminShopListTable td{
+  padding: 0.25rem;
+}
+.adminShopListTable tr:nth-child(even){
+  background-color: white;
+}
+
+.adminShopListTable th{
+  border-right: solid 1px white;
+  border-left: solid 1px var(--teal-700);
+}
+.adminShopListTable th:last-child{
+  border-right: none;
+  border-right: solid 1px var(--teal-700);
+}
+
+
+.adminShopListTable td{
+  border-left: solid 1px var(--teal-700);
+}
+.adminShopListTable td:last-child{
+  border-right: solid 1px var(--teal-700);
+}
+
+.adminShopListTable tr td{
+  border-bottom: solid 1px var(--teal-700);
+}
+.shopCreateSection{
+  padding: 1.5rem;
+  margin: 0 0 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 30px rgb(18 47 61 / 50%),
+              -10px -10px 30px rgb(248 253 255 / 90%),
+              inset 10px 10px 30px transparent,
+              inset -10px -10px 30px transparent;
+
+}
+
+
+.shopCreateSection>h3{
+  color: var(--blue-600);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+
+.shopShowTabs{
+  display: flex;
+  padding-left: 0.5rem;
+}
+.shopShowTab{
+  padding: 0.5rem;
+  margin-right: 0.25rem;
+  background: var(--teal-100);
+  color: var(--teal-600);
+  border: solid 1px var(--teal-600);
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.shopShowTab.active{
+  background: var(--teal-600);
+  color: white;
+}
+.shopShowDetail{
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0 0 3rem;
+  border-radius: 0.5rem;
+  border: solid 1px var(--teal-600);
+}
+
+.shopDetailContainer{
+  margin: 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+.shopDetailContainerTitle{
+  padding: 0.5rem;
+  background: var(--teal-100);
+  color: var(--teal-600);
+  border-bottom: solid 1px var(--teal-600);
+  width: var(--shopDetailContainerTitleWidth);
+}
+.shopDetailContainerContents{
+  padding: 0.5rem;
+  border-bottom: solid 1px var(--teal-600);
+  width: calc(100% - var(--shopDetailContainerTitleWidth));
+}
+
+
+.shopShowStaffTable{
+  width: 100%;
+  margin: 0 auto 3rem;
+}
+.shopShowStaffTable th{
+  background: var(--teal-700);
+  color: white;
+  padding: 0.5rem;
+}
+.shopShowStaffTable td{
+  padding: 0.25rem;
+}
+.shopShowStaffTable tr:nth-child(even){
+  background-color: white;
+}
+
+.shopShowStaffTable th{
+  border-right: solid 1px white;
+  border-left: solid 1px var(--teal-700);
+}
+.shopShowStaffTable th:last-child{
+  border-right: none;
+  border-right: solid 1px var(--teal-700);
+}
+
+
+.shopShowStaffTable td{
+  border-left: solid 1px var(--teal-700);
+}
+.shopShowStaffTable td:last-child{
+  border-right: solid 1px var(--teal-700);
+}
+
+.shopShowStaffTable tr td{
+  border-bottom: solid 1px var(--teal-700);
+}
