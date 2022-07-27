@@ -5,6 +5,7 @@ namespace App\Providers\ShopService;
 use App\Models\{Shop, ShopUserBelong, Staff};
 use Auth;
 use SessionConst;
+use Exception;
 
 
 /**
