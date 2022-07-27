@@ -26,7 +26,10 @@ class ShopService
         $selectableShops = ShopUserBelong::getStaffByStaffId($loginUserId);
 
         if(count($selectableShops) == 0){ // 選択できる店舗がない場合、エラー処理
-            throw new Exception('どの店舗も閲覧する権限がありません');
+            // throw new Exception('どの店舗も閲覧する権限がありません');
+
+            session(['flash-message-errors' => ['どの店舗も閲覧する権限がありません']]);
+            return false;
         }
 
 
